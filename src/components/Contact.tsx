@@ -180,7 +180,7 @@ const Contact = () => {
                   id="name"
                   name="name"
                   type="text"
-                  placeholder="John Doe"
+                  placeholder="names..."
                   value={formData.name}
                   onChange={handleChange}
                   className={`bg-muted border-border focus:border-primary ${
@@ -202,7 +202,7 @@ const Contact = () => {
                   id="email"
                   name="email"
                   type="email"
-                  placeholder="john@example.com"
+                  placeholder="email@example.com"
                   value={formData.email}
                   onChange={handleChange}
                   className={`bg-muted border-border focus:border-primary ${

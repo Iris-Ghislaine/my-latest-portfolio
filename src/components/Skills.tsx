@@ -5,7 +5,7 @@ import { useRef } from "react";
 const frontendSkills = [
   { name: "Javascript", level: 98 },
   { name: "React / Next.js", level: 95 },
-  { name: "SwiftUI/UIkit", level: 95 },
+  { name: "SwiftUI / UIkit", level: 95 },
   { name: "TypeScript", level: 92 },
   { name: "Tailwind CSS", level: 90 },
 ];
@@ -155,7 +155,7 @@ const Skills = () => {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            <h3 className="text-2xl font-serif font-bold text-foreground mb-8">
+            <h3 className="text-2xl font-serif font-bold text-foreground mb-6">
               Experience
             </h3>
             <div className="space-y-8">
