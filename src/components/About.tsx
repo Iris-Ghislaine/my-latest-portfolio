@@ -1,48 +1,20 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
+import { GraduationCap } from "lucide-react";
 
-const frontendSkills = [
-  { name: "Javascript", level: 98 },
-  { name: "React / Next.js", level: 95 },
-  { name: "SwiftUI/UIkit", level: 95 },
-  { name: "TypeScript", level: 92 },
-  { name: "Tailwind CSS", level: 90 },
-  
-];
-
-const backendSkills = [
-  { name: "C / C++", level: 90 },
-  { name: "java / springBoot", level: 90 },
-  { name: "Node.js ", level: 90 },
-  { name: "Python ", level: 85 },
-  { name: "PostgreSQL / MongoDB", level: 88 },
-  { name: "REST  APIs", level: 92 },
-];
-
-const devopsSkills = [
-  { name: "Linux / Shell Scripting", level: 85 },
-  { name: "Git & GitHub", level: 95 },
-];
-
-const experience = [
+const education = [
   {
-    role: "Trainee / Lead Trainee",
-    company: " AUCA-SWIFT Program",
-    period: "Feb 2025 - Present",
-    description: "Led a team of trainees during the Swift iOS training program, coordinating tasks, supporting teammates, and ensuring smooth learning progress.",
+    degree: "Bachelor of Science in Software Engineering",
+    institution: "Adventist University of Central Africa (AUCA)",
+    period: "2023 - Present",
+    description: "Focusing on software engineering, algorithms, and full-stack development.",
   },
   {
-    role: "Front-End Trainee",
-    company: "Igire Rwanda Organization / SheCanCode",
-    period: "Sept 2025 - Present",
-    description: "Studying JavaScript, its frameworks and libraries, and Next.js for building modern web applications. Experienced in using TypeScript for project development and Tailwind CSS for creating responsive, visually consistent UIs.",
-  },
-  {
-    role: "Junior Developer",
-    company: "Startup",
-    period: "2018 - 2020",
-    description: "Developed full-stack features using React and Node.js, contributing to both client-facing and backend services.",
+    degree: "High School Diploma",
+    institution: "Groupe Scolaire Notre Dame De Lourdes",
+    period: "2019 - 2021",
+    description: "Mathematics, Economics, and Computer Science track.",
   },
 ];
 
@@ -59,7 +31,7 @@ const About = () => {
           transition={{ duration: 0.6 }}
           className="mb-16"
         >
-          <span className="text-accent font-medium tracking-widest text-sm uppercase">
+          <span className="text-yellow-400 font-medium tracking-widest text-sm uppercase">
             About Me
           </span>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-foreground mt-4">
@@ -70,160 +42,110 @@ const About = () => {
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-16">
-          {/* Left Column - Bio & Experience */}
+          {/* Left Column - Bio */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-              I'm a full-stack software engineer with 5+ years of experience building 
-              scalable applications from database to UI. I love architecting robust 
-              backend systems and crafting intuitive user experiences.
+              I'm a passionate full-stack software engineer currently pursuing my degree in software Engineering. 
+              I love building scalable applications from database to UI, architecting robust backend systems, 
+              and crafting intuitive user experiences.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed mb-12">
-              From designing RESTful APIs and optimizing database queries to building 
-              responsive frontends, I enjoy the challenge of end-to-end development 
-              and delivering complete solutions.
+              From building responsive frontends 
+              with modern frameworks to designing RESTful APIs and optimizing database queries, I enjoy the challenge of end-to-end development and delivering 
+              complete solutions that make a difference.
             </p>
 
-            <h3 className="text-2xl font-serif font-bold text-foreground mb-8">
-              Experience
-            </h3>
+            {/* Stats */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="grid grid-cols-3 gap-6 p-8 bg-muted/50 rounded-2xl"
+            >
+              <div className="text-center">
+                <div className="text-3xl font-bold text-primary mb-1">3+</div>
+                <div className="text-sm text-muted-foreground">Years Coding</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-primary mb-1">5+</div>
+                <div className="text-sm text-muted-foreground">Projects</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-primary mb-1">10+</div>
+                <div className="text-sm text-muted-foreground">Technologies</div>
+              </div>
+            </motion.div>
+          </motion.div>
+
+          {/* Right Column - Education */}
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.6, delay: 0.3 }}
+          >
+            <div className="flex items-center gap-3 mb-8">
+              <div className="w-12 h-12 rounded-full bg-yellow-400/20 flex items-center justify-center">
+                <GraduationCap className="w-6 h-6 text-yellow-400" />
+              </div>
+              <h3 className="text-2xl font-serif font-bold text-foreground">
+                Education
+              </h3>
+            </div>
+            
             <div className="space-y-8">
-              {experience.map((exp, index) => (
+              {education.map((edu, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   animate={isInView ? { opacity: 1, y: 0 } : {}}
-                  transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
-                  className="relative pl-6 border-l-2 border-accent"
+                  transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
+                  className="relative pl-6 border-l-2 border-primary"
                 >
-                  <div className="absolute left-0 top-0 w-3 h-3 -translate-x-[7px] rounded-full bg-accent" />
-                  <span className="text-sm text-accent font-medium">
-                    {exp.period}
+                  <div className="absolute left-0 top-0 w-3 h-3 -translate-x-[7px] rounded-full bg-primary" />
+                  <span className="text-sm text-primary font-medium">
+                    {edu.period}
                   </span>
                   <h4 className="text-xl font-semibold text-foreground mt-1">
-                    {exp.role}
+                    {edu.degree}
                   </h4>
-                  <p className="text-muted-foreground">{exp.company}</p>
+                  <p className="text-muted-foreground font-medium">{edu.institution}</p>
                   <p className="text-muted-foreground/80 mt-2 text-sm">
-                    {exp.description}
+                    {edu.description}
                   </p>
                 </motion.div>
               ))}
             </div>
-          </motion.div>
 
-          {/* Right Column - Skills */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.4 }}
-          >
-            <h3 className="text-2xl font-serif font-bold text-foreground mb-6">
-              Frontend
-            </h3>
-            <div className="space-y-4 mb-8">
-              {frontendSkills.map((skill, index) => (
-                <motion.div
-                  key={skill.name}
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={isInView ? { opacity: 1, x: 0 } : {}}
-                  transition={{ duration: 0.5, delay: 0.5 + index * 0.05 }}
-                >
-                  <div className="flex justify-between mb-2">
-                    <span className="font-medium text-foreground text-sm">{skill.name}</span>
-                    <span className="text-muted-foreground text-sm">{skill.level}%</span>
-                  </div>
-                  <div className="h-2 bg-muted rounded-full overflow-hidden">
-                    <motion.div
-                      className="h-full bg-primary rounded-full"
-                      initial={{ width: 0 }}
-                      animate={isInView ? { width: `${skill.level}%` } : {}}
-                      transition={{ duration: 1, delay: 0.6 + index * 0.05 }}
-                    />
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-
-            <h3 className="text-2xl font-serif font-bold text-foreground mb-6">
-              Backend
-            </h3>
-            <div className="space-y-4 mb-8">
-              {backendSkills.map((skill, index) => (
-                <motion.div
-                  key={skill.name}
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={isInView ? { opacity: 1, x: 0 } : {}}
-                  transition={{ duration: 0.5, delay: 0.7 + index * 0.05 }}
-                >
-                  <div className="flex justify-between mb-2">
-                    <span className="font-medium text-foreground text-sm">{skill.name}</span>
-                    <span className="text-muted-foreground text-sm">{skill.level}%</span>
-                  </div>
-                  <div className="h-2 bg-muted rounded-full overflow-hidden">
-                    <motion.div
-                      className="h-full bg-accent rounded-full"
-                      initial={{ width: 0 }}
-                      animate={isInView ? { width: `${skill.level}%` } : {}}
-                      transition={{ duration: 1, delay: 0.8 + index * 0.05 }}
-                    />
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-
-            <h3 className="text-2xl font-serif font-bold text-foreground mb-6">
-              DevOps & Tools
-            </h3>
-            <div className="space-y-4">
-              {devopsSkills.map((skill, index) => (
-                <motion.div
-                  key={skill.name}
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={isInView ? { opacity: 1, x: 0 } : {}}
-                  transition={{ duration: 0.5, delay: 0.9 + index * 0.05 }}
-                >
-                  <div className="flex justify-between mb-2">
-                    <span className="font-medium text-foreground text-sm">{skill.name}</span>
-                    <span className="text-muted-foreground text-sm">{skill.level}%</span>
-                  </div>
-                  <div className="h-2 bg-muted rounded-full overflow-hidden">
-                    <motion.div
-                      className="h-full bg-primary/70 rounded-full"
-                      initial={{ width: 0 }}
-                      animate={isInView ? { width: `${skill.level}%` } : {}}
-                      transition={{ duration: 1, delay: 1.0 + index * 0.05 }}
-                    />
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-
-            {/* Stats */}
+            {/* Certifications/Achievements
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.8 }}
-              className="grid grid-cols-3 gap-6 mt-12 p-8 bg-primary rounded-2xl"
+              transition={{ duration: 0.6, delay: 0.6 }}
+              className="mt-12 p-6 bg-yellow-400/10 rounded-xl border border-yellow-400/20"
             >
-              {[
-                { value: "5+", label: "Years Experience" },
-                { value: "50+", label: "Projects Completed" },
-                { value: "30+", label: "Happy Clients" },
-              ].map((stat, index) => (
-                <div key={index} className="text-center">
-                  <span className="text-3xl md:text-4xl font-serif font-bold text-accent">
-                    {stat.value}
-                  </span>
-                  <p className="text-primary-foreground/80 text-sm mt-1">
-                    {stat.label}
-                  </p>
-                </div>
-              ))}
-            </motion.div>
+              <div className="flex items-center gap-3 mb-4">
+                <Award className="w-5 h-5 text-yellow-400" />
+                <h4 className="font-semibold text-foreground">Certifications & Training</h4>
+              </div>
+              <ul className="space-y-2 text-sm text-muted-foreground">
+                <li className="flex items-start gap-2">
+                  <span className="text-yellow-400 mt-1">•</span>
+                  <span>AUCA-SWIFT iOS Development Program - Lead Trainee</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-yellow-400 mt-1">•</span>
+                  <span>SheCanCode Front-End Development Training</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-yellow-400 mt-1">•</span>
+                  <span>Full-Stack Web Development Bootcamp</span>
+                </li>
+              </ul>
+            </motion.div> */}
           </motion.div>
         </div>
       </div>

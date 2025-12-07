@@ -6,6 +6,7 @@ import { Button } from "./ui/button";
 const navLinks = [
   { name: "Home", href: "#home" },
   { name: "About", href: "#about" },
+  { name: "Skills", href: "#skills" },
   { name: "Projects", href: "#projects" },
   { name: "Contact", href: "#contact" },
 ];
@@ -44,7 +45,7 @@ const Navigation = () => {
             Portfolio
           </motion.a>
 
-          {/* Desktop Navigation */}
+          {/* Desktop Navigation - Centered */}
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link, index) => (
               <motion.a
@@ -58,16 +59,19 @@ const Navigation = () => {
                 {link.name}
               </motion.a>
             ))}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.7 }}
-            >
-              <Button variant="hero" size="lg" asChild>
-                <a href="#contact">Let's Talk</a>
-              </Button>
-            </motion.div>
           </div>
+
+          {/* Let's Talk Button */}
+          <motion.div
+            className="hidden md:block"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.7 }}
+          >
+            <Button variant="hero" size="lg" asChild>
+              <a href="#contact">Let's Talk</a>
+            </Button>
+          </motion.div>
 
           {/* Mobile Menu Button */}
           <Button

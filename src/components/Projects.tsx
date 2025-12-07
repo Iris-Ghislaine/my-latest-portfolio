@@ -8,93 +8,100 @@ import useEmblaCarousel from "embla-carousel-react";
 const projects = [
   {
     id: 1,
-    title: "E-Commerce Platform",
+    title: "Personal Note Management",
     description:
-      "A full-featured e-commerce platform with cart functionality, payment integration, and admin dashboard.",
-    tags: ["React", "TypeScript", "Stripe", "Tailwind"],
-    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80",
+      "A comprehensive web application for managing personal notes with full CRUD operations. Built with React.js, Tailwind CSS, and Spring Boot backend.",
+    tags: ["React", "TypeScript","Tailwindcss","springBoot","postgress"],
+    image: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=800&q=80",
     liveUrl: "#",
-    githubUrl: "#",
+    githubUrl: "https://github.com/Iris-Ghislaine/Personal-Note-Management-System",
   },
   {
     id: 2,
     title: "Task Management App",
     description:
-      "A collaborative task management application with real-time updates and drag-and-drop functionality.",
-    tags: ["Next.js", "Socket.io", "PostgreSQL"],
-    image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=800&q=80",
-    liveUrl: "#",
-    githubUrl: "#",
+      "A collaborative task management application with real-time updates and storing data in firebase.",
+    tags: ["Next.js",  "firebase"],
+    image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800&q=80",
+    liveUrl: "https://github.com/Iris-Ghislaine/task-management-firebase",
+    githubUrl: "https://task-management-firebase.netlify.app/login",
+  },
+    {
+    id: 2,
+    title: "To-Do App",
+    description:
+      "A collaborative to do application with real-time updates and drag and drop functionality.",
+    tags: ["reactjs"],
+    image: "https://images.unsplash.com/photo-1540350394557-8d14678e7f91?w=800&q=80",
+    liveUrl: "https://to-do-reactjs-ap.netlify.app/",
+    githubUrl: "https://github.com/Iris-Ghislaine/to-do-app-in-reactJS",
   },
   {
     id: 3,
-    title: "Analytics Dashboard",
+    title: "Nourishing Life (React Native)",
     description:
-      "An interactive analytics dashboard with data visualization and filtering capabilities.",
-    tags: ["React", "D3.js", "Chart.js"],
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
-    liveUrl: "#",
-    githubUrl: "#",
+      "A mobile health application that recommends appropriate foods based on users' chronic diseases. Features personalized nutrition guidance and health tracking.",
+    tags: ["React Native", "SQLite"],
+    image: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=800&q=80",
+    githubUrl: "https://github.com/Iris-Ghislaine/Nourishing-Life-with-React-Native-",
   },
-  {
-    id: 4,
-    title: "Social Media App",
-    description:
-      "A modern social media application with real-time messaging and user authentication.",
-    tags: ["React Native", "Firebase", "Redux"],
-    image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&q=80",
-    liveUrl: "#",
-    githubUrl: "#",
-  },
+  // {
+  //   id: 4,
+  //   title: "Social Media App",
+  //   description:
+  //     "A modern social media application with real-time messaging and user authentication.",
+  //   tags: ["React Native", "Firebase", "Redux"],
+  //   image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&q=80",
+  //   liveUrl: "#",
+  //   githubUrl: "#",
+  // },
   {
     id: 5,
-    title: "AI Writing Assistant",
+    title: "Movie Explorer App",
     description:
-      "An AI-powered writing tool that helps users create content with smart suggestions.",
-    tags: ["React", "OpenAI", "Node.js"],
-    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80",
-    liveUrl: "#",
-    githubUrl: "#",
+      "A modern, responsive single-page application built with React that allows users to explore movies and TV shows from the TVMaze API. Features include searching, filtering by genre, viewing detailed information, and managing a favorites list.",
+    tags: ["React vite", "tailwindcss", "local storage"],
+    image: "https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=800&q=80",
+    liveUrl: "https://movie-explorer-appli.netlify.app/",
+    githubUrl: "https://github.com/Iris-Ghislaine/movie-explorer",
   },
   {
     id: 6,
-    title: "Fitness Tracker",
+    title: "Nourishing Life (SwiftUI) - In Progress",
     description:
-      "A comprehensive fitness tracking app with workout plans and progress analytics.",
-    tags: ["React", "GraphQL", "MongoDB"],
-    image: "https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?w=800&q=80",
-    liveUrl: "#",
-    githubUrl: "#",
+      "iOS version of the Nourishing Life app, currently in development. Features native iOS design patterns and enhanced user experience for Apple devices.",
+    tags: ["SwiftUI", "firebase"],
+    image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&q=80",
+    githubUrl: "https://github.com/Iris-Ghislaine/NourishingAppSwiftUI",
   },
   {
     id: 7,
-    title: "Real Estate Platform",
+    title: "BookSky",
     description:
-      "A property listing platform with map integration and virtual tour features.",
-    tags: ["Next.js", "Mapbox", "Prisma"],
-    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80",
-    liveUrl: "#",
-    githubUrl: "#",
+      "A platform which fetchs books written by different authors and allow user to add books to favorite",
+    tags: ["", "html", "tailwindcss","js"],
+    image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=800&q=80",
+    liveUrl: "https://book-explorer-capstone.netlify.app/",
+    githubUrl: "https://github.com/Iris-Ghislaine/book-explorer-capstone",
   },
   {
     id: 8,
-    title: "Learning Management System",
+    title: "Rema-Blog",
     description:
-      "An educational platform with course management and progress tracking.",
+      "A feature-rich, Medium-inspired blogging platform built with Next.js 14, Prisma, Supabase, and Cloudinary.",
     tags: ["React", "AWS", "PostgreSQL"],
-    image: "https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=800&q=80",
-    liveUrl: "#",
-    githubUrl: "#",
+    image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&q=80",
+    liveUrl: "https://phase-2-capstone-2ui9.vercel.app/",
+    githubUrl: "https://github.com/Iris-Ghislaine/phase-2-capstone",
   },
   {
     id: 9,
-    title: "Crypto Portfolio Tracker",
+    title: "Global Child Nutrition Analysis Project, 2025",
     description:
-      "A cryptocurrency tracking app with real-time prices and portfolio management.",
-    tags: ["React", "WebSocket", "CoinGecko API"],
-    image: "https://images.unsplash.com/photo-1621761191319-c6fb62004040?w=800&q=80",
-    liveUrl: "#",
-    githubUrl: "#",
+      " 2025 project analyzing child nutrition patterns across the world. The project leverages data cleaning, exploratory data analysis (EDA), and K-Means clustering to identify age-based nutritional trends, visualized through an interactive Power BI dashboard. The aim is to provide actionable insights for global health interventions.",
+    tags: ["Jupyter Notebook", "Python", "PowerBI"],
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
+    githubUrl: "https://github.com/Iris-Ghislaine/global-child-nutrition-project-data-analysis",
   },
 ];
 
@@ -239,7 +246,7 @@ const Projects = () => {
           transition={{ duration: 0.6 }}
           className="mb-16 text-center"
         >
-          <span className="text-primary font-medium tracking-widest text-sm uppercase">
+          <span className="text-yellow-400 font-medium tracking-widest text-sm uppercase">
             Portfolio
           </span>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-foreground mt-4">

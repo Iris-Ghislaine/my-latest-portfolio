@@ -21,19 +21,19 @@ const contactInfo = [
   {
     icon: Mail,
     label: "Email",
-    value: "hello@example.com",
-    href: "mailto:hello@example.com",
+    value: "irisghislaine7@gmail.com",
+    href: "mailto:irisghislaine7@gmail.com",
   },
   {
     icon: Phone,
     label: "Phone",
-    value: "+1 (555) 123-4567",
-    href: "tel:+15551234567",
+    value: "+250 (789) 539659",
+    href: "tel:+250789539659",
   },
   {
     icon: MapPin,
     label: "Location",
-    value: "San Francisco, CA",
+    value: "Kigali City, Rwanda",
     href: "#",
   },
 ];
@@ -67,7 +67,7 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      const validated = contactSchema.parse(formData);
+      contactSchema.parse(formData);
       
       // Simulate form submission
       await new Promise((resolve) => setTimeout(resolve, 1500));
@@ -83,7 +83,7 @@ const Contact = () => {
     } catch (error) {
       if (error instanceof z.ZodError) {
         const fieldErrors: Partial<ContactFormData> = {};
-        error.errors.forEach((err) => {
+        error.issues.forEach((err: z.ZodIssue) => {
           if (err.path[0]) {
             fieldErrors[err.path[0] as keyof ContactFormData] = err.message;
           }

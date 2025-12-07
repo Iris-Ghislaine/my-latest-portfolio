@@ -55,7 +55,7 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-5xl md:text-5xl lg:text-8xl font-serif font-bold text-accent leading-tight mb-6"
           >
-            Building End-to-End
+          I'm
             <br />
             <motion.span
               initial={{ opacity: 0, x: -30 }}
@@ -63,7 +63,7 @@ const Hero = () => {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="text-accent italic"
             >
-              Solutions
+              Iris-Ghislaine
             </motion.span>
           </motion.h1>
 
@@ -107,9 +107,21 @@ const Hero = () => {
             </span>
             <div className="flex gap-4">
               {[
-                { icon: Github, href: "#", label: "GitHub" },
-                { icon: Linkedin, href: "#", label: "LinkedIn" },
-                { icon: Mail, href: "#contact", label: "Email" },
+                {
+                  icon: Github,
+                  href: "https://github.com/Iris-Ghislaine",
+                  label: "GitHub",
+                },
+                {
+                  icon: Linkedin,
+                  href: "https://www.linkedin.com/in/iris-ghislaine-ganza-188797334/",
+                  label: "LinkedIn",
+                },
+                {
+                  icon: Mail,
+                  href: "mailto:irisghislaine7@gmail.com",
+                  label: "Mail",
+                },
               ].map((social, index) => (
                 <motion.a
                   key={social.label}

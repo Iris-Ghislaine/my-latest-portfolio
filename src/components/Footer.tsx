@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
-import { Github, Linkedin, Twitter, Heart } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 
 const socialLinks = [
-  { icon: Github, href: "#", label: "GitHub" },
-  { icon: Linkedin, href: "#", label: "LinkedIn" },
-  { icon: Twitter, href: "#", label: "Twitter" },
+  { icon: Github, href: "https://github.com/Iris-Ghislaine", label: "GitHub" },
+  { icon: Linkedin, href: "https://www.linkedin.com/in/iris-ghislaine-ganza-188797334/", label: "LinkedIn" },
+  { icon: Mail, href: "mailto:irisghislaine7@gmail.com", label: "Mail" },
 ];
 
 const Footer = () => {
@@ -35,10 +35,6 @@ const Footer = () => {
               </motion.a>
             ))}
           </div>
-
-          <p className="text-muted-foreground text-sm flex items-center gap-1">
-            Made with <Heart className="w-4 h-4 text-destructive fill-destructive" /> using React
-          </p>
         </div>
 
         <div className="mt-8 pt-8 border-t border-border text-center">
