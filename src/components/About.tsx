@@ -35,7 +35,7 @@ const About = () => {
             About Me
           </span>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-foreground mt-4">
-            Full-Stack
+            Software Engineer
             <br />
             <span className="text-primary italic">Problem Solver</span>
           </h2>
