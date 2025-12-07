@@ -3,38 +3,40 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 
 const frontendSkills = [
+  { name: "Javascript", level: 98 },
   { name: "React / Next.js", level: 95 },
+  { name: "SwiftUI/UIkit", level: 95 },
   { name: "TypeScript", level: 92 },
   { name: "Tailwind CSS", level: 90 },
-  { name: "Vue.js", level: 80 },
+  
 ];
 
 const backendSkills = [
-  { name: "Node.js / Express", level: 90 },
-  { name: "Python / Django", level: 85 },
+  { name: "C / C++", level: 90 },
+  { name: "java / springBoot", level: 90 },
+  { name: "Node.js ", level: 90 },
+  { name: "Python ", level: 85 },
   { name: "PostgreSQL / MongoDB", level: 88 },
-  { name: "REST & GraphQL APIs", level: 92 },
+  { name: "REST  APIs", level: 92 },
 ];
 
 const devopsSkills = [
-  { name: "Docker / Kubernetes", level: 82 },
-  { name: "AWS / GCP", level: 85 },
-  { name: "CI/CD Pipelines", level: 88 },
+  { name: "Linux / Shell Scripting", level: 85 },
   { name: "Git & GitHub", level: 95 },
 ];
 
 const experience = [
   {
-    role: "Senior Software Engineer",
-    company: "Tech Company",
-    period: "2022 - Present",
-    description: "Leading full-stack development, designing system architecture, and mentoring developers across frontend and backend teams.",
+    role: "Trainee / Lead Trainee",
+    company: " AUCA-SWIFT Program",
+    period: "Feb 2025 - Present",
+    description: "Led a team of trainees during the Swift iOS training program, coordinating tasks, supporting teammates, and ensuring smooth learning progress.",
   },
   {
-    role: "Software Engineer",
-    company: "Digital Agency",
-    period: "2020 - 2022",
-    description: "Built end-to-end web applications including RESTful APIs, database design, and responsive frontends for enterprise clients.",
+    role: "Front-End Trainee",
+    company: "Igire Rwanda Organization / SheCanCode",
+    period: "Sept 2025 - Present",
+    description: "Studying JavaScript, its frameworks and libraries, and Next.js for building modern web applications. Experienced in using TypeScript for project development and Tailwind CSS for creating responsive, visually consistent UIs.",
   },
   {
     role: "Junior Developer",

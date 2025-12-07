@@ -45,7 +45,7 @@ const Hero = () => {
             className="mb-6"
           >
             <span className="inline-block px-4 py-2 rounded-full bg-accent/20 text-accent text-sm font-medium tracking-wide">
-              Full-Stack Software Engineer
+              Software Engineer
             </span>
           </motion.div>
 
@@ -53,7 +53,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold text-accent leading-tight mb-6"
+            className="text-5xl md:text-5xl lg:text-8xl font-serif font-bold text-accent leading-tight mb-6"
           >
             Building End-to-End
             <br />
@@ -73,8 +73,8 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-xl md:text-2xl text-primary-foreground/80 max-w-2xl mb-10 leading-relaxed"
           >
-            I architect and build scalable applications from database to UI, 
-            specializing in React, Node.js, and cloud technologies.
+            I create beautiful, fast, and scalable full-stack web applications.
+            My focus is clean code and impactful user experiences.
           </motion.p>
 
           <motion.div
@@ -102,7 +102,9 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.5 }}
             className="flex items-center gap-6"
           >
-            <span className="text-primary-foreground/60 text-sm">Find me on</span>
+            <span className="text-primary-foreground/60 text-sm">
+              Find me on
+            </span>
             <div className="flex gap-4">
               {[
                 { icon: Github, href: "#", label: "GitHub" },
