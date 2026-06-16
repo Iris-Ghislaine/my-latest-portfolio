@@ -6,18 +6,44 @@ import { Button } from "./ui/button";
 import useEmblaCarousel from "embla-carousel-react";
 
 const projects = [
-  {
+
+   {
     id: 1,
+    title: "GreenEx - Smart Waste Collection Management Platform",
+    description:
+      "Developed frontend interfaces for waste collection scheduling, billing, and complaint tracking. Collaborated with a team integrating frontend with backend APIs.",
+    tags: ["Next.js", "TypeScript","Tailwindcss","springBoot","postgress"],
+    image: "https://images.pexels.com/photos/37597788/pexels-photo-37597788.jpeg?auto=compress&cs=tinysrgb&w=800",
+    liveUrl: "https://greenex-fe.vercel.app/",
+    githubUrl: "https://github.com/SheCanCODE-Capstone-Projects/Greenex_fe",
+  },
+
+   {
+    id: 2,
+    title: "MamaCare - Digital Antenatal Support & Smart Triage System",
+    description:
+      "Built responsive frontend features for antenatal care support, symptom tracking, and appointment booking. Collaborated with teammates to integrate smart triage and doctor communication features.",
+    tags: ["React.js","Tailwindcss"," Asp .NET Core","postgress"],
+    image: "https://images.pexels.com/photos/7990369/pexels-photo-7990369.jpeg?auto=compress&cs=tinysrgb&w=800",
+    objectPosition: "50% 40%",
+    objectFit: "cover" as const,
+    liveUrl: "https://mama-care-ten.vercel.app/",
+    githubUrl: "https://github.com/Pacifique16/MamaCare",
+  },
+
+  {
+    id: 3,
     title: "Personal Note Management",
     description:
       "A comprehensive web application for managing personal notes with full CRUD operations. Built with React.js, Tailwind CSS, and Spring Boot backend.",
     tags: ["React", "TypeScript","Tailwindcss","springBoot","postgress"],
-    image: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1517842645767-c639042777db?w=800&q=80",
     liveUrl: "#",
     githubUrl: "https://github.com/Iris-Ghislaine/Personal-Note-Management-System",
   },
+
   {
-    id: 2,
+    id: 4,
     title: "Task Management App",
     description:
       "A collaborative task management application with real-time updates and storing data in firebase.",
@@ -27,7 +53,7 @@ const projects = [
     githubUrl: "https://task-management-firebase.netlify.app/login",
   },
     {
-    id: 2,
+    id: 5,
     title: "To-Do App",
     description:
       "A collaborative to do application with real-time updates and drag and drop functionality.",
@@ -37,7 +63,7 @@ const projects = [
     githubUrl: "https://github.com/Iris-Ghislaine/to-do-app-in-reactJS",
   },
   {
-    id: 3,
+    id: 6,
     title: "Nourishing Life (React Native)",
     description:
       "A mobile health application that recommends appropriate foods based on users' chronic diseases. Features personalized nutrition guidance and health tracking.",
@@ -45,18 +71,9 @@ const projects = [
     image: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=800&q=80",
     githubUrl: "https://github.com/Iris-Ghislaine/Nourishing-Life-with-React-Native-",
   },
-  // {
-  //   id: 4,
-  //   title: "Social Media App",
-  //   description:
-  //     "A modern social media application with real-time messaging and user authentication.",
-  //   tags: ["React Native", "Firebase", "Redux"],
-  //   image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&q=80",
-  //   liveUrl: "#",
-  //   githubUrl: "#",
-  // },
+ 
   {
-    id: 5,
+    id: 7,
     title: "Movie Explorer App",
     description:
       "A modern, responsive single-page application built with React that allows users to explore movies and TV shows from the TVMaze API. Features include searching, filtering by genre, viewing detailed information, and managing a favorites list.",
@@ -66,7 +83,7 @@ const projects = [
     githubUrl: "https://github.com/Iris-Ghislaine/movie-explorer",
   },
   {
-    id: 6,
+    id: 8,
     title: "Nourishing Life (SwiftUI) - In Progress",
     description:
       "iOS version of the Nourishing Life app, currently in development. Features native iOS design patterns and enhanced user experience for Apple devices.",
@@ -75,7 +92,7 @@ const projects = [
     githubUrl: "https://github.com/Iris-Ghislaine/NourishingAppSwiftUI",
   },
   {
-    id: 7,
+    id: 9,
     title: "BookSky",
     description:
       "A platform which fetchs books written by different authors and allow user to add books to favorite",
@@ -85,7 +102,7 @@ const projects = [
     githubUrl: "https://github.com/Iris-Ghislaine/book-explorer-capstone",
   },
   {
-    id: 8,
+    id: 10,
     title: "Rema-Blog",
     description:
       "A feature-rich, Medium-inspired blogging platform built with Next.js 14, Prisma, Supabase, and Cloudinary.",
@@ -95,7 +112,7 @@ const projects = [
     githubUrl: "https://github.com/Iris-Ghislaine/phase-2-capstone",
   },
   {
-    id: 9,
+    id: 11,
     title: "Global Child Nutrition Analysis Project, 2025",
     description:
       " 2025 project analyzing child nutrition patterns across the world. The project leverages data cleaning, exploratory data analysis (EDA), and K-Means clustering to identify age-based nutritional trends, visualized through an interactive Power BI dashboard. The aim is to provide actionable insights for global health interventions.",
@@ -122,11 +139,12 @@ const ProjectCard = ({
       onMouseEnter={onHover}
       onMouseLeave={onLeave}
     >
-      <div className="relative overflow-hidden aspect-video">
+      <div className="relative overflow-hidden h-80">
         <motion.img
           src={project.image}
           alt={project.title}
-          className="w-full h-full object-cover"
+          className={`w-full h-full object-cover`}
+          style={{ objectPosition: project.objectPosition ?? "center" }}
           animate={{ scale: isHovered ? 1.05 : 1 }}
           transition={{ duration: 0.4 }}
         />
@@ -223,17 +241,19 @@ const Projects = () => {
   useEffect(() => {
     if (!emblaApi) return;
 
-    setScrollSnaps(emblaApi.scrollSnapList());
+    const onInit = () => setScrollSnaps(emblaApi.scrollSnapList());
+    const onSelect = () => setSelectedIndex(emblaApi.selectedScrollSnap());
 
-    const onSelect = () => {
-      setSelectedIndex(emblaApi.selectedScrollSnap());
-    };
-
+    emblaApi.on("init", onInit);
     emblaApi.on("select", onSelect);
+    emblaApi.on("reInit", onInit);
+    onInit();
     onSelect();
 
     return () => {
+      emblaApi.off("init", onInit);
       emblaApi.off("select", onSelect);
+      emblaApi.off("reInit", onInit);
     };
   }, [emblaApi]);
 

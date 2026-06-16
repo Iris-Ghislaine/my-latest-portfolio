@@ -157,7 +157,29 @@ const Contact = () => {
                 Available for freelance projects and full-time opportunities.
                 Let's discuss how we can work together.
               </p>
+              {/* <div className="flex items-center gap-2 rounded-full bg-background ">
+                <span className="w-3 h-3 bg-green-400 rounded-full animate-pulse" />
+                <span className="text-sm text-accent">Available for hire</span>
+              </div> */}
             </motion.div>
+                 {/* <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={isInView ? { opacity: 1, scale: 1 } : {}}
+              transition={{ delay: 0.5 }}
+              className="p-8 bg-background rounded-2xl text-foreground"
+            >
+              <h4 className="font-display text-xl font-bold mb-3">
+                Open to Opportunities
+              </h4>
+              <p className="opacity-90 leading-relaxed mb-4">
+                I'm currently available for freelance work and full-time positions. 
+                If you have a project that needs a dedicated developer, let's connect!
+              </p>
+              <div className="flex items-center gap-2">
+                <span className="w-3 h-3 bg-green-400 rounded-full animate-pulse" />
+                <span className="text-sm">Available for hire</span>
+              </div>
+            </motion.div> */}
           </motion.div>
 
           {/* Contact Form */}

@@ -5,6 +5,7 @@ import { useRef } from "react";
 const frontendSkills = [
   { name: "Javascript", level: 98 },
   { name: "React / Next.js", level: 95 },
+  { name: "HTML / CSS", level: 98 },
   { name: "SwiftUI / UIkit", level: 95 },
   { name: "TypeScript", level: 92 },
   { name: "Tailwind CSS", level: 90 },
@@ -13,9 +14,9 @@ const frontendSkills = [
 const backendSkills = [
   { name: "C / C++", level: 90 },
   { name: "java / springBoot", level: 90 },
-  { name: "Node.js ", level: 90 },
+  { name: "c# ", level: 96 },
   { name: "Python ", level: 85 },
-  { name: "PostgreSQL / MongoDB", level: 88 },
+  { name: "PostgreSQL / MySQL", level: 88 },
   { name: "REST APIs", level: 92 },
 ];
 
@@ -28,14 +29,21 @@ const experience = [
   {
     role: "Trainee / Lead Trainee",
     company: "AUCA-SWIFT Program",
-    period: "Feb 2025 - Present",
+    period: "Feb 2025 - Jan 2026",
     description: "Led a team of trainees during the Swift iOS training program, coordinating tasks, supporting teammates, and ensuring smooth learning progress.",
   },
   {
     role: "Front-End Trainee",
     company: "Igire Rwanda Organization / SheCanCode",
-    period: "Sept 2024 - Present",
+    period: "Sept 2025 - Feb 2026",
     description: "Studying JavaScript, its frameworks and libraries, and Next.js for building modern web applications. Experienced in using TypeScript for project development and Tailwind CSS for creating responsive, visually consistent UIs.",
+  },
+
+  {
+    role: "Trainee ",
+    company: "AUCA INNOVATION CENTER Program",
+    period: "Jan 2026 - Present",
+    description: " I am currently In AUCA INNOVATION CENTER supported by MINICT and the Mastercard Foundation, focusing on AI, Big Data, cybersecurity, web and mobile development, DevOps,UI/UX and entrepreneurship.",
   },
 ];
 
