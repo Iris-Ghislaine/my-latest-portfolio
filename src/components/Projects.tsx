@@ -8,7 +8,17 @@ import useEmblaCarousel from "embla-carousel-react";
 const projects = [
 
    {
-    id: 1,
+  id: 1,
+  title: "RESQ - AI-Powered Emergency Response System",
+  description:
+    "Co-designed an AI dispatch platform for the Rwanda National Police as a final-year capstone project. Worked in a 5-person team, contributing to database architecture and AI logic for recommending response units in roughly 1.2 seconds.",
+  tags: ["React", "Spring Boot", "PostgreSQL"],
+  image: "https://www.motorolasolutions.com/content/dam/msi/images/artificialintelligence/assist/D01_suite-overview-top-align.webp",
+  
+},
+
+   {
+    id: 2,
     title: "GreenEx - Smart Waste Collection Management Platform",
     description:
       "Developed frontend interfaces for waste collection scheduling, billing, and complaint tracking. Collaborated with a team integrating frontend with backend APIs.",
@@ -17,9 +27,10 @@ const projects = [
     liveUrl: "https://greenex-fe.vercel.app/",
     githubUrl: "https://github.com/SheCanCODE-Capstone-Projects/Greenex_fe",
   },
+  
 
    {
-    id: 2,
+    id: 3,
     title: "MamaCare - Digital Antenatal Support & Smart Triage System",
     description:
       "Built responsive frontend features for antenatal care support, symptom tracking, and appointment booking. Collaborated with teammates to integrate smart triage and doctor communication features.",
@@ -32,7 +43,7 @@ const projects = [
   },
 
   {
-    id: 3,
+    id: 4,
     title: "Personal Note Management",
     description:
       "A comprehensive web application for managing personal notes with full CRUD operations. Built with React.js, Tailwind CSS, and Spring Boot backend.",
@@ -43,17 +54,17 @@ const projects = [
   },
 
   {
-    id: 4,
+    id: 5,
     title: "Task Management App",
     description:
       "A collaborative task management application with real-time updates and storing data in firebase.",
     tags: ["Next.js",  "firebase"],
     image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800&q=80",
-    liveUrl: "https://github.com/Iris-Ghislaine/task-management-firebase",
-    githubUrl: "https://task-management-firebase.netlify.app/login",
+    liveUrl: "https://task-management-firebase.netlify.app/login",
+    githubUrl: "https://github.com/Iris-Ghislaine/task-management-firebase",
   },
     {
-    id: 5,
+    id: 6,
     title: "To-Do App",
     description:
       "A collaborative to do application with real-time updates and drag and drop functionality.",
@@ -63,7 +74,7 @@ const projects = [
     githubUrl: "https://github.com/Iris-Ghislaine/to-do-app-in-reactJS",
   },
   {
-    id: 6,
+    id: 7,
     title: "Nourishing Life (React Native)",
     description:
       "A mobile health application that recommends appropriate foods based on users' chronic diseases. Features personalized nutrition guidance and health tracking.",
@@ -73,7 +84,7 @@ const projects = [
   },
  
   {
-    id: 7,
+    id: 8,
     title: "Movie Explorer App",
     description:
       "A modern, responsive single-page application built with React that allows users to explore movies and TV shows from the TVMaze API. Features include searching, filtering by genre, viewing detailed information, and managing a favorites list.",
@@ -83,8 +94,8 @@ const projects = [
     githubUrl: "https://github.com/Iris-Ghislaine/movie-explorer",
   },
   {
-    id: 8,
-    title: "Nourishing Life (SwiftUI) - In Progress",
+    id: 9,
+    title: "Nourishing Life (SwiftUI)",
     description:
       "iOS version of the Nourishing Life app, currently in development. Features native iOS design patterns and enhanced user experience for Apple devices.",
     tags: ["SwiftUI", "firebase"],
@@ -92,7 +103,7 @@ const projects = [
     githubUrl: "https://github.com/Iris-Ghislaine/NourishingAppSwiftUI",
   },
   {
-    id: 9,
+    id: 10,
     title: "BookSky",
     description:
       "A platform which fetchs books written by different authors and allow user to add books to favorite",
@@ -102,7 +113,7 @@ const projects = [
     githubUrl: "https://github.com/Iris-Ghislaine/book-explorer-capstone",
   },
   {
-    id: 10,
+    id: 11,
     title: "Rema-Blog",
     description:
       "A feature-rich, Medium-inspired blogging platform built with Next.js 14, Prisma, Supabase, and Cloudinary.",
@@ -112,7 +123,7 @@ const projects = [
     githubUrl: "https://github.com/Iris-Ghislaine/phase-2-capstone",
   },
   {
-    id: 11,
+    id: 12,
     title: "Global Child Nutrition Analysis Project, 2025",
     description:
       " 2025 project analyzing child nutrition patterns across the world. The project leverages data cleaning, exploratory data analysis (EDA), and K-Means clustering to identify age-based nutritional trends, visualized through an interactive Power BI dashboard. The aim is to provide actionable insights for global health interventions.",
