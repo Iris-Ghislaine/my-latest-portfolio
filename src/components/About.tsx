@@ -7,8 +7,8 @@ const education = [
   {
     degree: "Bachelor of Science in Software Engineering",
     institution: "Adventist University of Central Africa (AUCA)",
-    period: "2023 - Present",
-    description: "Focusing on software engineering, algorithms, and full-stack development.",
+    period: "2023 - 2026",
+    description: "Graduated in Software Engineering, with a focus on algorithms, full-stack, web, and mobile development.",
   },
   {
     degree: "High School Diploma",
@@ -49,14 +49,14 @@ const About = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-              I'm a passionate full-stack software engineer currently pursuing my degree in software Engineering. 
-              I love building scalable applications from database to UI, architecting robust backend systems, 
-              and crafting intuitive user experiences.
+              I'm a software engineer with a BSc in Software Engineering from the Adventist University of Central Africa,
+              with hands-on experience across full-stack, web, and iOS development. I build user-focused applications
+              with Spring Boot, React, React Native, Swift, and PHP.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed mb-12">
-              From building responsive frontends 
-              with modern frameworks to designing RESTful APIs and optimizing database queries, I enjoy the challenge of end-to-end development and delivering 
-              complete solutions that make a difference.
+              From building responsive frontends
+              with modern frameworks to designing RESTful APIs and database architecture, I enjoy end-to-end development
+              and working in agile, team-based environments to deliver complete solutions that make a difference.
             </p>
 
             {/* Stats */}

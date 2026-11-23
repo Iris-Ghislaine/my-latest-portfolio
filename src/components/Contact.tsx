@@ -33,7 +33,7 @@ const contactInfo = [
   {
     icon: MapPin,
     label: "Location",
-    value: "Kigali City, Rwanda",
+    value: "Kigali, Rwanda",
     href: "#",
   },
 ];

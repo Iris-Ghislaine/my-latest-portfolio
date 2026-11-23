@@ -73,8 +73,8 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-xl md:text-2xl text-primary-foreground/80 max-w-2xl mb-10 leading-relaxed"
           >
-            I create beautiful, fast, and scalable full-stack web applications.
-            My focus is clean code and impactful user experiences.
+            Software engineer building user-focused full-stack, web, and iOS
+            applications. My focus is clean code and impactful user experiences.
           </motion.p>
 
           <motion.div
