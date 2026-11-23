@@ -4,8 +4,20 @@ import { useRef, useState, useEffect, useCallback } from "react";
 import { ExternalLink, Github, ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "./ui/button";
 import useEmblaCarousel from "embla-carousel-react";
+import isukuImage from "../assets/isuku.jpg";
 
 const projects = [
+
+  {
+    id: 13,
+    title: "IsuKu - Smart Waste Collection for Rwanda",
+    description:
+      "A full waste collection platform for residents, drivers and waste companies: pickup scheduling, billing and mobile-money payments, complaints, and push notifications. Built a plain-PHP REST API, a React admin dashboard, and a Flutter mobile app available in Kinyarwanda.",
+    tags: ["Flutter", "React", "PHP", "MySQL", "Firebase"],
+    image: isukuImage,
+    liveUrl: "https://isuku.vercel.app",
+    githubUrl: "https://github.com/Iris-Ghislaine/IsuKu",
+  },
 
    {
   id: 1,
@@ -144,6 +156,12 @@ const ProjectCard = ({
   onHover: () => void;
   onLeave: () => void;
 }) => {
+  // Not every project has both links, and "#" is a placeholder, so only
+  // render the links that actually exist.
+  const { liveUrl, githubUrl } = project as { liveUrl?: string; githubUrl?: string };
+  const demoUrl = liveUrl && liveUrl !== "#" ? liveUrl : undefined;
+  const primaryUrl = demoUrl ?? githubUrl;
+
   return (
     <article
       className="group relative bg-card rounded-2xl overflow-hidden border border-border hover:border-accent transition-all duration-500 h-full"
@@ -159,31 +177,41 @@ const ProjectCard = ({
           animate={{ scale: isHovered ? 1.05 : 1 }}
           transition={{ duration: 0.4 }}
         />
-        <motion.div
-          className="absolute inset-0 bg-primary/80 flex items-center justify-center gap-4"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: isHovered ? 1 : 0 }}
-          transition={{ duration: 0.3 }}
-        >
-          <motion.a
-            href={project.liveUrl}
-            className="w-12 h-12 rounded-full bg-accent text-primary flex items-center justify-center"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.95 }}
-            aria-label="View live demo"
+        {primaryUrl && (
+          <motion.div
+            className="absolute inset-0 bg-primary/80 flex items-center justify-center gap-4"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: isHovered ? 1 : 0 }}
+            transition={{ duration: 0.3 }}
           >
-            <ExternalLink className="w-5 h-5" />
-          </motion.a>
-          <motion.a
-            href={project.githubUrl}
-            className="w-12 h-12 rounded-full bg-accent text-primary flex items-center justify-center"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.95 }}
-            aria-label="View source code"
-          >
-            <Github className="w-5 h-5" />
-          </motion.a>
-        </motion.div>
+            {demoUrl && (
+              <motion.a
+                href={demoUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-12 h-12 rounded-full bg-accent text-primary flex items-center justify-center"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+                aria-label="View live demo"
+              >
+                <ExternalLink className="w-5 h-5" />
+              </motion.a>
+            )}
+            {githubUrl && (
+              <motion.a
+                href={githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-12 h-12 rounded-full bg-accent text-primary flex items-center justify-center"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+                aria-label="View source code"
+              >
+                <Github className="w-5 h-5" />
+              </motion.a>
+            )}
+          </motion.div>
+        )}
       </div>
 
       <div className="p-6">
@@ -203,12 +231,16 @@ const ProjectCard = ({
         <p className="text-muted-foreground leading-relaxed text-sm mb-4 line-clamp-2">
           {project.description}
         </p>
-        <a
-          href={project.liveUrl}
-          className="inline-flex items-center gap-2 text-primary font-medium text-sm hover:gap-4 transition-all duration-300"
-        >
-          View Project <ArrowRight className="w-4 h-4" />
-        </a>
+        {primaryUrl && (
+          <a
+            href={primaryUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-primary font-medium text-sm hover:gap-4 transition-all duration-300"
+          >
+            View Project <ArrowRight className="w-4 h-4" />
+          </a>
+        )}
       </div>
     </article>
   );
@@ -325,11 +357,13 @@ const Projects = () => {
 
           {/* Carousel */}
           <div className="overflow-hidden px-2" ref={emblaRef}>
-            <div className="flex gap-6">
+            {/* Spacing is done with slide padding + negative container margin,
+                which Embla measures reliably (CSS `gap` can collapse with loop). */}
+            <div className="flex -ml-6">
               {projects.map((project) => (
                 <div
                   key={project.id}
-                  className="flex-shrink-0 w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]"
+                  className="min-w-0 pl-6 flex-[0_0_100%] md:flex-[0_0_50%] lg:flex-[0_0_33.3333%]"
                 >
                   <ProjectCard
                     project={project}
