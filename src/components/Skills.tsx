@@ -3,20 +3,22 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 
 const frontendSkills = [
-  { name: "Javascript", level: 98 },
+  { name: "JavaScript", level: 98 },
   { name: "React / Next.js", level: 95 },
   { name: "HTML / CSS", level: 98 },
-  { name: "SwiftUI / UIkit", level: 95 },
+  { name: "React Native", level: 88 },
+  { name: "SwiftUI / UIKit", level: 95 },
   { name: "TypeScript", level: 92 },
   { name: "Tailwind CSS", level: 90 },
 ];
 
 const backendSkills = [
   { name: "C / C++", level: 90 },
-  { name: "java / springBoot", level: 90 },
-  { name: "c# ", level: 96 },
-  { name: "Python ", level: 85 },
-  { name: "PostgreSQL / MySQL", level: 88 },
+  { name: "Java / Spring Boot", level: 90 },
+  { name: "C#", level: 96 },
+  { name: "Python", level: 85 },
+  { name: "PHP", level: 80 },
+  { name: "PostgreSQL", level: 88 },
   { name: "REST APIs", level: 92 },
 ];
 
@@ -27,23 +29,28 @@ const devopsSkills = [
 
 const experience = [
   {
-    role: "Trainee / Lead Trainee",
-    company: "AUCA-SWIFT Program",
-    period: "Feb 2025 - Jan 2026",
-    description: "Led a team of trainees during the Swift iOS training program, coordinating tasks, supporting teammates, and ensuring smooth learning progress.",
+    role: "Full Stack Developer Intern",
+    company: "ESICIA",
+    period: "2026 - Present",
+    description: "Gaining hands-on experience in full-stack development, contributing to frontend, backend, API integration, database management, testing, and debugging.",
   },
   {
-    role: "Front-End Trainee",
-    company: "Igire Rwanda Organization / SheCanCode",
-    period: "Sept 2025 - Feb 2026",
-    description: "Studying JavaScript, its frameworks and libraries, and Next.js for building modern web applications. Experienced in using TypeScript for project development and Tailwind CSS for creating responsive, visually consistent UIs.",
+    role: "Trainee",
+    company: "AUCA Innovation Center",
+    period: "2026 - Present",
+    description: "Mastering advanced AI, web and mobile development, UI/UX, cybersecurity, and DevOps skills, alongside entrepreneurship, in partnership with the Mastercard Foundation.",
   },
-
   {
-    role: "Trainee ",
-    company: "AUCA INNOVATION CENTER Program",
-    period: "Jan 2026 - Present",
-    description: " I am currently In AUCA INNOVATION CENTER supported by MINICT and the Mastercard Foundation, focusing on AI, Big Data, cybersecurity, web and mobile development, DevOps,UI/UX and entrepreneurship.",
+    role: "Trainee",
+    company: "Igire Rwanda / SheCanCode Program",
+    period: "2025 - 2026",
+    description: "Built responsive user interfaces and integrated APIs as part of a program supporting women in tech across Rwanda, sponsored by the Mastercard Foundation.",
+  },
+  {
+    role: "Trainee",
+    company: "SWIFT",
+    period: "2025 - 2026",
+    description: "Received hands-on training building fast, efficient iOS applications using SwiftUI.",
   },
 ];
 
@@ -86,9 +93,8 @@ const Skills = () => {
                   animate={isInView ? { opacity: 1, x: 0 } : {}}
                   transition={{ duration: 0.5, delay: 0.3 + index * 0.05 }}
                 >
-                  <div className="flex justify-between mb-2">
+                  <div className="mb-2">
                     <span className="font-medium text-foreground text-sm">{skill.name}</span>
-                    <span className="text-muted-foreground text-sm">{skill.level}%</span>
                   </div>
                   <div className="h-2 bg-muted rounded-full overflow-hidden">
                     <motion.div
@@ -113,9 +119,8 @@ const Skills = () => {
                   animate={isInView ? { opacity: 1, x: 0 } : {}}
                   transition={{ duration: 0.5, delay: 0.5 + index * 0.05 }}
                 >
-                  <div className="flex justify-between mb-2">
+                  <div className="mb-2">
                     <span className="font-medium text-foreground text-sm">{skill.name}</span>
-                    <span className="text-muted-foreground text-sm">{skill.level}%</span>
                   </div>
                   <div className="h-2 bg-muted rounded-full overflow-hidden">
                     <motion.div
@@ -140,9 +145,8 @@ const Skills = () => {
                   animate={isInView ? { opacity: 1, x: 0 } : {}}
                   transition={{ duration: 0.5, delay: 0.7 + index * 0.05 }}
                 >
-                  <div className="flex justify-between mb-2">
+                  <div className="mb-2">
                     <span className="font-medium text-foreground text-sm">{skill.name}</span>
-                    <span className="text-muted-foreground text-sm">{skill.level}%</span>
                   </div>
                   <div className="h-2 bg-muted rounded-full overflow-hidden">
                     <motion.div
